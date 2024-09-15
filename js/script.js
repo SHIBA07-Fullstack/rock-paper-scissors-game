@@ -1,7 +1,7 @@
 // Script for Rock Paper Scissor game
 
 
-
+let i;
 
 // Getting random computer choice
 
@@ -27,12 +27,12 @@ function getHumanChoice() {
     
     let input = prompt("Enter your choice:");
 
-    if (input.toLowerCase() === "rock"||input.toLowerCase() === "paper"||input.toLowerCase() === "scissor"){
-        return input = input.toLowerCase();  
-    }
-    else if(!input){
+    if(!input){
         return alert("Canceled");
     } 
+    else if (input.toLowerCase() === "rock"||input.toLowerCase() === "paper"||input.toLowerCase() === "scissor"){
+        return input = input.toLowerCase();  
+    }
     else{ 
         alert("Enter valid choice:");
         return getHumanChoice();  
@@ -41,6 +41,10 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playGame(){
+
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log(computerSelection);
@@ -88,3 +92,24 @@ function playRound(humanChoice, computerChoice){
 
 playRound(humanSelection, computerSelection);
 
+
+}
+
+
+for(i=1;i<=5;i++){
+    
+    playGame();
+    console.log(`Human score: ${humanScore}`);
+    console.log(`Computer score: ${computerScore}`);
+
+}
+
+if(humanScore>computerScore){
+    console.log("You won against computer!");
+}
+else if (humanScore === computerScore) {
+    console.log("It's draw!");
+}
+else {
+    console.log("Computer won!");
+}
