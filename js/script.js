@@ -1,7 +1,7 @@
 // Script for Rock Paper Scissor game
 
-let humanScore = 0;
-let computerScore = 0;
+
+
 
 // Getting random computer choice
 
@@ -16,7 +16,7 @@ function getComputerChoice(){
         CompChoice = 'paper';
     }
     else{
-        CompChoice = 'scissors';
+        CompChoice = 'scissor';
     }
     return CompChoice;
 }
@@ -25,19 +25,66 @@ function getComputerChoice(){
 
 function getHumanChoice() {
     
-    const input = prompt("Enter your choice:");
+    let input = prompt("Enter your choice:");
 
-    if(!input){
+    if (input.toLowerCase() === "rock"||input.toLowerCase() === "paper"||input.toLowerCase() === "scissor"){
+        return input = input.toLowerCase();  
+    }
+    else if(!input){
         return alert("Canceled");
     } 
-    else if(input.toLowerCase() === "rock"||input.toLowerCase() === "paper"||input.toLowerCase() === "scissors"){
-        return input.toLowerCase();  
-    }
     else{ 
         alert("Enter valid choice:");
         return getHumanChoice();  
     }         
 }
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+
+let humanScore = 0;
+let computerScore = 0;
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+console.log(computerSelection);
+console.log(humanSelection);
+
+function playRound(humanChoice, computerChoice){
+
+    // Took nested if else reference from "geeksforgeeks.org" otherwise code would have been multi line 
+    
+    if (humanChoice === computerChoice){
+        alert("It's a tie!");
+        console.log("It's a tie!");
+    }
+    else if (humanChoice === "rock"){
+        if (computerChoice === "paper"){
+            computerScore++;
+            console.log("You lose! Paper beats rock.");
+        }
+        else {
+            humanScore++;
+            console.log("You win! Rock beats scissor.");
+        }
+    }
+    else if (humanChoice === "paper"){
+        if (computerChoice === "scissor"){
+            computerScore++;
+            console.log("You lose! Scissor beats paper");
+        }
+        else {
+            humanScore++;
+            console.log("You win! Paper beats rock.");
+        }
+    }
+    else if(humanChoice === "scissor"){
+        if (computerChoice === "rock"){
+            computerScore++;
+            console.log("You lose! Rock beats scissor.");
+        }
+        else {
+            humanScore++;
+            console.log("You win! Scissor beats paper.");
+        }
+    }
+}
+
+playRound(humanSelection, computerSelection);
 
