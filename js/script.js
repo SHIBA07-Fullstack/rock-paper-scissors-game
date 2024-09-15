@@ -1,6 +1,9 @@
 // Script for Rock Paper Scissor game
 
-
+let text = document.querySelector("#demo");
+const win = "You won against computer!";
+const draw = "It's draw!";
+const lose = "Computer won!";
 let i;
 
 // Getting random computer choice
@@ -104,12 +107,17 @@ for(i=1;i<=5;i++){
 
 }
 
+
+
 if(humanScore>computerScore){
     console.log("You won against computer!");
+    text.textContent = win;
 }
 else if (humanScore === computerScore) {
     console.log("It's draw!");
+    text.textContent = draw;
 }
 else {
     console.log("Computer won!");
+    text.textContent = lose;
 }
