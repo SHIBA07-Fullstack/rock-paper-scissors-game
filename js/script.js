@@ -5,6 +5,8 @@ const win = "You won against computer!";
 const draw = "It's draw!";
 const lose = "Computer won!";
 let i;
+let humanScore = 0;
+let computerScore = 0;
 
 // Getting random computer choice
 
@@ -42,69 +44,67 @@ function getHumanChoice() {
     }         
 }
 
-let humanScore = 0;
-let computerScore = 0;
+// Playing a full game
 
 function playGame(){
-
+    
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log(computerSelection);
 console.log(humanSelection);
 
+// Single game round function 
+
 function playRound(humanChoice, computerChoice){
 
-    // Took nested if else reference from "geeksforgeeks.org" otherwise code would have been multi line 
+// Took nested if else reference from "geeksforgeeks.org" otherwise code would have been multi line 
     
     if (humanChoice === computerChoice){
-        alert("It's a tie!");
         console.log("It's a tie!");
+        alert("It's a tie!");
     }
     else if (humanChoice === "rock"){
         if (computerChoice === "paper"){
-            computerScore++;
             console.log("You lose! Paper beats rock.");
+            computerScore++;
         }
         else {
-            humanScore++;
             console.log("You win! Rock beats scissor.");
+            humanScore++;
         }
     }
     else if (humanChoice === "paper"){
         if (computerChoice === "scissor"){
-            computerScore++;
             console.log("You lose! Scissor beats paper");
+            computerScore++;
         }
         else {
-            humanScore++;
             console.log("You win! Paper beats rock.");
+            humanScore++;
         }
     }
     else if(humanChoice === "scissor"){
         if (computerChoice === "rock"){
-            computerScore++;
             console.log("You lose! Rock beats scissor.");
+            computerScore++;
         }
         else {
-            humanScore++;
             console.log("You win! Scissor beats paper.");
+            humanScore++;
         }
     }
 }
 
 playRound(humanSelection, computerSelection);
-
+console.log(`Your score: ${humanScore}`);
+console.log(`Computer score: ${computerScore}`);
 
 }
 
 
-for(i=1;i<=5;i++){
-    
+for(i=1;i<=5;i++){  
     playGame();
-    console.log(`Human score: ${humanScore}`);
-    console.log(`Computer score: ${computerScore}`);
-
 }
 
 
