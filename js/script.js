@@ -1,5 +1,9 @@
 // Script for Rock Paper Scissor game
 
+function startGame(){
+
+console.clear();
+    
 let text = document.querySelector("#demo");
 const win = "You won against computer!";
 const draw = "It's draw!";
@@ -120,4 +124,5 @@ else if (humanScore === computerScore) {
 else {
     console.log("Computer won!");
     text.textContent = lose;
+}
 }
