@@ -48,11 +48,14 @@ body {
     font-size: 5rem;
 }
 
-.playerCoice{
+.playerChoice{
     width: 200px;
     height: 200px;
     background-color: hsl(214, 41%, 78%, .70);
     border: .3rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .computerChoice{
@@ -60,6 +63,9 @@ body {
     height: 200px;
     background-color: hsl(214, 41%, 78%, .70);
     border: .3rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Player selection area style! */
