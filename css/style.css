@@ -1,0 +1,115 @@
+/* Rock, Paper, Scissor game style sheet! */
+*,*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightseagreen;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem;
+}
+
+/* Announcement Box style */
+
+.announcementBox {
+    width: 400px;
+    height: fit-content;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: hsl(214, 41%, 78%, .70);
+    border: .3rem solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Choice visualization box style! */
+
+.choiceVisualBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    width: 100%;
+    align-items: center;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.playerCoice{
+    width: 200px;
+    height: 200px;
+    background-color: hsl(214, 41%, 78%, .70);
+    border: .3rem solid black;
+}
+
+.computerChoice{
+    width: 200px;
+    height: 200px;
+    background-color: hsl(214, 41%, 78%, .70);
+    border: .3rem solid black;
+}
+
+/* Player selection area style! */
+
+.playerSelection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.playerSelection > img {
+    height: 100px;
+    width: 100px;
+}
+
+.playerSelection > img:hover {
+    cursor: pointer;
+    transform: scale(1.35);
+    transition: .2s ease;
+}
+
+/* Counting box style! */
+
+.countBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+}
+
+.playerScore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+    border: .3rem solid black;
+    background-color: hsl(214, 41%, 78%, .70);
+    height: 70px;
+}
+
+.computerScore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+    border: .3rem solid black;
+    background-color: hsl(214, 41%, 78%, .70);
+}

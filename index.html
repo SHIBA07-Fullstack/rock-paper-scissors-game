@@ -4,14 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissor</title>
-    
-
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <button onclick="startGame()" id="start">Start Game!</button>
-    
+  <div class="main">
 
-    <p id="demo"></p>
+    <!-- Announcement Box! -->
+
+    <div class="announcementBox">--NULL--</div>
+    
+    <!-- Choice Visual Box! -->
+    
+    <div class="choiceVisualBox">
+        <div class="playerCoice"></div>x<div class="computerChoice"></div>
+    </div>
+
+    <!-- Player Selection Box -->
+
+    <div class="playerSelection">
+        <img class="rock" src="./imgs/fist-rock.png" alt="Rock">
+        <img class="paper" src="./imgs/hand-paper.png" alt="Paper">
+        <img class="scissor" src="./imgs/scissors.png" alt="Scissor">
+    </div>
+
+    <!-- Round Count Box! -->
+
+    <div class="countBox">
+        <div class="playerScore">
+            <p style="text-decoration: underline; font-weight: bold;">PLAYER SCORE</p></div>
+        <div class="computerScore">
+            <p style="text-decoration: underline; font-weight: bold;">COMPUTER SCORE</p></div>
+    </div>
+    
+    <div class="winnerAlertBox"></div>
+  </div>
     
     <script src="./js/script.js"></script>
 </body>
