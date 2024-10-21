@@ -108,6 +108,7 @@ body {
     border: .3rem solid black;
     background-color: hsl(214, 41%, 78%, .70);
     height: 70px;
+    width: 160px;
 }
 
 .computerScore {
@@ -118,4 +119,6 @@ body {
     padding: .5rem;
     border: .3rem solid black;
     background-color: hsl(214, 41%, 78%, .70);
+    height: 70px;
+    width: 160px;
 }
